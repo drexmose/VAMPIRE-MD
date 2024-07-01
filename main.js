@@ -170,7 +170,7 @@ vampire.ev.on("connection.update",async  (s) => {
 			await delay(1999)
             console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${botname} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
-	        console.log(chalk.magenta(`\n${themeemoji} YT CHANNEL: Xeon`))
+	        console.log(chalk.magenta(`\n${themeemoji} YT CHANNEL: drex_mose`))
             console.log(chalk.magenta(`${themeemoji} GITHUB: drexmose `))
             console.log(chalk.magenta(`${themeemoji} INSTAGRAM: @drex_mose `))
             console.log(chalk.magenta(`${themeemoji} WA NUMBER: ${owner}`))
