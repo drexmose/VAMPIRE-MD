@@ -12,7 +12,7 @@ const axios = require('axios')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, sleep, reSize } = require('./lib/myfunc')
-const { default: XeonBotIncConnect, delay, PHONENUMBER_MCC, makeCacheableSignalKeyStore, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, Browsers} = require("@whiskeysockets/baileys")
+const { default: vampireConnect, delay, PHONENUMBER_MCC, makeCacheableSignalKeyStore, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, Browsers} = require("@whiskeysockets/baileys")
 const NodeCache = require("node-cache")
 const Pino = require("pino")
 const readline = require("readline")
@@ -40,7 +40,7 @@ async function startVampireBot() {
 let { version, isLatest } = await fetchLatestBaileysVersion()
 const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
     const msgRetryCounterCache = new NodeCache() // for retry message, "waiting message"
-    const XeonBotInc = makeWASocket({
+    const vampire = makeWASocket({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: !pairingCode, // popping up QR in terminal log
       browser: Browsers.windows('Firefox'), // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
@@ -105,8 +105,8 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
             if (mek.key && mek.key.remoteJid === 'status@broadcast' )
             if (!vampire.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
             if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
-            const m = smsg(XeonBotInc, mek, store)
-            require("./Vampire")(XeonBotInc, m, chatUpdate, store)
+            const m = smsg(vampire, mek, store)
+            require("./Vampire")(vampire, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
@@ -160,7 +160,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
     
     vampire.public = true
 
-    vampire.serializeM = (m) => smsg(XeonBotInc, m, store)
+    vampire.serializeM = (m) => smsg(vampire, m, store)
 
 vampire.ev.on("connection.update",async  (s) => {
         const { connection, lastDisconnect } = s
