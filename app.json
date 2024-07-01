@@ -1,0 +1,18 @@
+{
+  "name": "VENOM-MD",
+  "description": "whatsapp md bot build with nodejs by drex",
+  "repository": "https://github.com/drexmose/VENOM-MD",
+  "logo": "https://telegra.ph/file/7487dd2c9837de960f873.png?format=png&name=900x900",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp vampire", "multi device"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
