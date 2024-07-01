@@ -1225,7 +1225,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                             showAdAttribution: true,
                             title: `${botname}`,
                             body: `${latensi.toFixed(4)} Second`,
-                            thumbnailUrl: 'https://i.ibb.co/dQkXV2Y/Picsart-23-10-10-18-28-51-982.jpg',
+                            thumbnailUrl: 'https://telegra.ph/file/7487dd2c9837de960f873.png',
                             sourceUrl: global.link,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -1247,7 +1247,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                             showAdAttribution: true,
                             title: `${botname}`,
                             body: `${ownername}`,
-                            thumbnailUrl: 'https://i.ibb.co/dQkXV2Y/Picsart-23-10-10-18-28-51-982.jpg',
+                            thumbnailUrl: 'https://telegra.ph/file/7487dd2c9837de960f873.png',
                             sourceUrl: global.link,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -1259,7 +1259,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'runtime':
-                let runtimetext = `Bots Have Been Running For ${runtime(process.uptime())}`
+                let runtimetext = `${botname} Has Been Running For.... ${runtime(process.uptime())}`
                 vampire.sendMessage(m.chat, {
                     text: runtimetext,
                     contextInfo: {
@@ -1267,7 +1267,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                             showAdAttribution: true,
                             title: `${botname}`,
                             body: `FORGET DONATE`,
-                            thumbnailUrl: 'https://i.ibb.co/dQkXV2Y/Picsart-23-10-10-18-28-51-982.jpg',
+                            thumbnailUrl: 'https://telegra.ph/file/7487dd2c9837de960f873.png',
                             sourceUrl: global.link,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -1286,8 +1286,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                         externalAdReply: {
                             showAdAttribution: true,
                             title: `${botname}`,
-                            body: `SCRIPT OF ${botname} is on YouTube @DGXeon`,
-                            thumbnailUrl: 'https://i.ibb.co/dQkXV2Y/Picsart-23-10-10-18-28-51-982.jpg',
+                            body: `SCRIPT OF ${botname} is on Github https:github.com/drexmose/VAMPIRE-MD`,
+                            thumbnailUrl: 'https://telegra.ph/file/7487dd2c9837de960f873.png',
                             sourceUrl: global.link,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -1355,7 +1355,7 @@ break
                 fs.unlinkSync(pop)
             }
             break
-case 'swm': case 'steal': case 'stickerwm': case 'take':{
+		case 'wm': case 'swm': case 'steal': case 'stickerwm': case 'take':{
 if (!args.join(" ")) return vampirereply(`Where is the text?`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0]
@@ -1480,7 +1480,7 @@ break
 
             }
             break
-            case 'tourl': {
+		case 'url': case 'upload': case 'tourl': {
                 vampirereply(mess.wait)
                 let media = await vampire.downloadAndSaveMediaMessage(qmsg)
                 if (/image/.test(mime)) {
@@ -2389,7 +2389,7 @@ if (typemenu === 'v1') {
                             externalAdReply: {
                                 title: botname,
                                 body: ownername,
-                                thumbnailUrl: 'https://i.ibb.co/kSs1stX/vampire1.jpg',
+                                thumbnailUrl: 'https://telegra.ph/file/7487dd2c9837de960f873.png',
                                 sourceUrl: link,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2407,7 +2407,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://i.ibb.co/Wppj16p/cheemspic.jpg',
+      thumbnailUrl: 'https://telegra.ph/file/7487dd2c9837de960f873.png',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
