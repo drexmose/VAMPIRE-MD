@@ -96,7 +96,7 @@ pkg install ffmpeg -y
 pkg install wget
 pkg install imagemagick -y
 git clone https://github.com/drexmose/VAMPIRE-MD
-cd VAMPIRE-MD
+cd vampire md
 yarn install
 npm start
 ```
