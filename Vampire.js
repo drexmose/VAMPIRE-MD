@@ -2389,7 +2389,7 @@ if (typemenu === 'v1') {
                             externalAdReply: {
                                 title: botname,
                                 body: ownername,
-                                thumbnailUrl: 'https://telegra.ph/file/7487dd2c9837de960f873.png',
+                                thumbnailUrl: 'fs.readFileSync(`./media/vampire1.jpg`)',
                                 sourceUrl: link,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -2407,7 +2407,7 @@ if (typemenu === 'v1') {
       externalAdReply: {
       title: botname,
       body: ownername,
-      thumbnailUrl: 'https://telegra.ph/file/7487dd2c9837de960f873.png',
+      thumbnailUrl: 'fs.readFileSync(`./media/vampire1.jpg`)',
       sourceUrl: ``,
       mediaType: 1,
       renderLargerThumbnail: true
