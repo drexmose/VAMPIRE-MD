@@ -78,7 +78,7 @@ var xeonytimewisher = `Good Morning 🌄`
  if(time2 < "05:00:00"){
 var xeonytimewisher = `Good Morning 🌄`
  } 
-module.exports = XeonBotInc = async (XeonBotInc, m, msg, chatUpdate, store) => {
+module.exports = vampire = async (vampire, m, msg, chatUpdate, store) => {
     try {
         const {
             type,
@@ -135,7 +135,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, msg, chatUpdate, store) => {
         const senderbot = m.key.fromMe ? vampire.user.id.split(':')[0] + "@s.whatsapp.net" || vampire.user.id : m.key.participant || m.key.remoteJid;
         const senderId = senderbot.split('@')[0];
         const isBot = clientId.includes(senderId);
-        expiredCheck(XeonBotInc, m, premium);
+        expiredCheck(vampire, m, premium);
 //group chat msg by xeon
 const vampirereply = (teks) => {
 vampire.sendMessage(m.chat,
@@ -2066,8 +2066,8 @@ case 'sound158':
 case 'sound159':
 case 'sound160':
 case 'sound161':
-XeonBotInc_dev = await getBuffer(`https://github.com/DGXeon/Tiktokmusic-API/raw/master/tiktokmusic/${command}.mp3`)
-await vampire.sendMessage(m.chat, { audio: XeonBotInc_dev, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+vampire_dev = await getBuffer(`https://github.com/DGXeon/Tiktokmusic-API/raw/master/tiktokmusic/${command}.mp3`)
+await vampire.sendMessage(m.chat, { audio: vampire_dev, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 break
 
 //bug cases
