@@ -2435,7 +2435,7 @@ if (typemenu === 'v1') {
                 }
                 break
             default:
-                if (budy.startsWith('=┃◎┨')) {
+                if (budy.startsWith('=>')) {
                     if (!isCreator) return vampirereply(mess.owner)
 
                     function Return(sul) {
@@ -2447,13 +2447,13 @@ if (typemenu === 'v1') {
                         return vampirereply(bang)
                     }
                     try {
-                        vampirereply(util.format(eval(`(async () =┃◎┨ { return ${budy.slice(3)} })()`)))
+                        vampirereply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
                     } catch (e) {
                         vampirereply(String(e))
                     }
                 }
 
-                if (budy.startsWith('┃◎┨')) {
+                if (budy.startsWith('>')) {
                     if (!isCreator) return vampirereply(mess.owner)
                     try {
                         let evaled = await eval(budy.slice(2))
@@ -2465,7 +2465,7 @@ if (typemenu === 'v1') {
                 }
                 if (budy.startsWith('$')) {
                     if (!isCreator) return vampirereply(mess.owner)
-                    exec(budy.slice(2), (err, stdout) =┃◎┨ {
+                    exec(budy.slice(2), (err, stdout) => {
                         if (err) return vampirereply(err)
                         if (stdout) return vampirereply(stdout)
                     })
@@ -2477,7 +2477,7 @@ if (typemenu === 'v1') {
     }
 }
 let file = require.resolve(__filename)
-fs.watchFile(file, () =┃◎┨ {
+fs.watchFile(file, () => {
     fs.unwatchFile(file)
     console.log(chalk.redBright(`Update ${__filename}`))
     delete require.cache[file]
